@@ -1,8 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { GameComponent } from './screens/game/game.component';
 
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    component: GameComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
