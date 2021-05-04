@@ -1,10 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ballsArray } from 'src/app/constant/balls';
 
 import { BetSlipComponent } from './bet-slip.component';
 
-describe('BetSlipComponent', () => {
+fdescribe('BetSlipComponent', () => {
   let component: BetSlipComponent;
   let fixture: ComponentFixture<BetSlipComponent>;
+
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({

@@ -1,1 +1,5 @@
-<p>balls works!</p>
+<section *ngIf="ballsArray">
+  <div *ngFor="let ball of ballsArray" (click)="ballSelected.emit(ball)">
+      <span class="ball" [ngStyle]="{backgroundColor: ball.color}" [ngClass]="{selected: ball.selected}">{{ball.id}}</span>
+  </div>
+</section>

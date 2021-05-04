@@ -1,1 +1,12 @@
-<p>ball-selector works!</p>
+<div class="container">
+  <section *ngIf="!(ballsService.randomNumber | async); else result">
+    <h5 class="mt-5 offset-2">Numbers</h5>
+    <app-balls [ballsArray]="ballsArray" (ballSelected)="addBall($event)"></app-balls>
+    <span class="text-info my-5" (click)="onRemoveAll()">Clear Selection</span>
+  </section>
+  <ng-template #result>
+    <section>
+      <app-results></app-results>
+    </section>
+  </ng-template>
+</div>

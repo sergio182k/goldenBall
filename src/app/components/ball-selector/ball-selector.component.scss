@@ -1,0 +1,18 @@
+.container {
+  background-color: white;
+  min-height: 95%;
+
+  section {
+    display: flex;
+    flex-direction: column;
+
+    app-balls{
+      align-self: center;
+    }
+
+    .text-info {
+      align-self: center;
+    }
+  }
+}
+

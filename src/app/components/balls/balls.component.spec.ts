@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BallsComponent } from './balls.component';
+import { ballsArray } from 'src/app/constant/balls';
 
 describe('BallsComponent', () => {
   let component: BallsComponent;
@@ -20,6 +21,7 @@ describe('BallsComponent', () => {
   });
 
   it('should create', () => {
+    component.ballsArray = ballsArray;
     expect(component).toBeTruthy();
   });
 });
