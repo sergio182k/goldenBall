@@ -15,7 +15,7 @@ describe('BallsService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should add Ball', () => {
+  it('should not add Ball', () => {
     service.balls = ballsArray;
     const result = service.addBall(ballsArray[0]);
     expect(result).toBeFalsy();
@@ -24,5 +24,16 @@ describe('BallsService', () => {
   it('should add Ball', () => {
     const result = service.addBall(ballsArray[0]);
     expect(result).toBeTruthy();
+  });
+
+  it('should clear selection', () => {
+    service.balls = ballsArray;
+    service.clearSelection();
+    expect(service.balls.length).toBe(0);
+  });
+
+  it('should add Ball', () => {
+    service.generateRandom();
+    expect(service).toBeTruthy();
   });
 });
