@@ -73,7 +73,7 @@ describe('BallSelectorComponent', () => {
     }
     spyOn(component.ballsService, 'addBall').and.returnValue(true);
     component.addBall(ball);
-    fixture.detectChanges();
-    expect(component).toBeTruthy();
+    const result = component.ballsArray.find(b => b.id === ball.id);
+    expect(result.selected).toBeTruthy();
   });
 });

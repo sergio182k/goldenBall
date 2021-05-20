@@ -3,6 +3,7 @@ import { TestBed } from '@angular/core/testing';
 
 
 import { BallsService } from './balls.service';
+import { skip } from 'rxjs/operators';
 
 describe('BallsService', () => {
   let service: BallsService;
@@ -33,7 +34,10 @@ describe('BallsService', () => {
   });
 
   it('should add Ball', () => {
+    service.randomNumber.pipe(skip(1)).subscribe((value) => {
+      expect(value).toBeGreaterThanOrEqual(0);
+      expect(value).toBeLessThanOrEqual(10);
+    })
     service.generateRandom();
-    expect(service).toBeTruthy();
   });
 });

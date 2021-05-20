@@ -1,7 +1,6 @@
 import { grayBalls } from './../../constant/gray-balls';
 import { Component, Input, OnChanges, SimpleChanges, Output, EventEmitter } from '@angular/core';
 import { BallsService } from 'src/app/services/balls.service';
-import { ballsArray } from 'src/app/constant/balls';
 import { Ball } from 'src/app/models/ball.model';
 
 @Component({
